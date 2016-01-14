@@ -7,6 +7,7 @@ var PythonShell = require("python-shell");
 var request = require('request');
 var cheerio = require('cheerio');
 
+
 var fs = require("fs");
 var App = fs.readFileSync('App.html');
 
@@ -22,7 +23,6 @@ http.createServer(function( request, response)    {
 
     response.end("Hello World");
 }).listen(8081);
-
 console.log("Server running at http://127.0.0.1:8081/");
 
 
