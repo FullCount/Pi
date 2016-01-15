@@ -18,5 +18,5 @@ server.use("/data/", serverRoutes);
 server.listen(80, function()
 {
     // Word uitgevoerd als de server is gestart.
-    console.log("Started Express Server on Port: 127.0.0.1:80");
+    console.log("Started Express Server on Port: 0.0.0.0:80");
 });

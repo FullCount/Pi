@@ -8,9 +8,13 @@ var router = express.Router();
 // Te vinden op localhost/data/licht/x/y
 router.get("/licht/:id/:status", function(req,res)
 {
-    //TODO: GPIO vervangen met https://github.com/eugeneware/wiring-pi/blob/master/DOCUMENTATION.md
-    res.end(JSON.stringify({ data : "Iets"}));
+    //TODO: GPIO vervangen met
+    //licht.zetAan();
+    res.end(JSON.stringify({success: false, error: req.params.id + " heeft gefaald in status: "+req.params.status}));
 });
+
+
+//Temperatuur
 
 
 // Zorg dat require in "server.js" de juiste klasse laadt.

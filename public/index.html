@@ -12,9 +12,20 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-        <script src="C:\Users\Kevin\WebstormProjects\NodeTest\Main.js"></script>
+        <script src="js/main.js"></script>
         <script>
-            $.backstretch("/img/winter.jpg");
+            $.getJSON("/data/licht/3/aan",
+            function(object)
+            {
+                if(object.success)
+                {
+
+                }
+                else
+                {
+                    alert(object.error);
+                }
+            });
         </script>
     </head>
 
