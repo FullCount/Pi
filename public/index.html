@@ -14,7 +14,24 @@
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
         <script>
-            $.getJSON("/data/licht/3/aan",
+            lichtStatus = "uit";
+            lampNummer = 0;
+
+            if (lichtStatus == "uit") {
+                $.getJSON("/data/licht/" + "Lampje " + lampNummer + "/" + lichtStatus,
+                        function(object)
+                        {
+                            if(object.success)
+                            {
+
+                            }
+                            else
+                            {
+                                alert(object.error);
+                            }
+                        });
+            }
+            $.getJSON("/data/licht/1/" + lichtStatus,
             function(object)
             {
                 if(object.success)

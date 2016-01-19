@@ -10,7 +10,14 @@ router.get("/licht/:id/:status", function(req,res)
 {
     //TODO: GPIO vervangen met
     //licht.zetAan();
-    res.end(JSON.stringify({success: false, error: req.params.id + " heeft gefaald in status: "+req.params.status}));
+    res.end(JSON.stringify({
+        success: false,
+        error: req.params.id + " heeft gefaald in status: " + req.params.status
+
+
+
+    }));
+
 });
 
 
